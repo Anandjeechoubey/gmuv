@@ -1,0 +1,23 @@
+# action.yaml
+name: 'GMUV Action'
+author: 'groovy-sky'
+description: "GitHub's Markdown URL Validator"
+branding:
+  icon: 'check-square'
+  color: 'green'
+inputs:
+  account:
+    description: "Github's account name"
+    required: true
+  repository:
+    description: "Github's repository name"
+    required: true
+  filename:
+    description: "Report's filename"
+    required: false
+outputs:
+  result:
+    description: "Output"
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
